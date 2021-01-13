@@ -1,0 +1,37 @@
+# 1- count the repitition of specific pattern in a genome
+def pattern_count(text,pattern):
+    count=0
+    for i in range (len(text)-len(pattern)+1):
+        if text[i:i+len(pattern)]==pattern:
+            count +=1
+    return (count)
+    
+    
+  
+ # 2- return the most frequent pattern in a genome
+ 
+ 
+ def BetterFrequentWords (text,k):
+    pattern=[]
+    count=[]
+    count_pat=[]
+    frequent=[]
+    for s in range (len(text)-k+1):
+        pat=text[s:s+k]
+        pattern.append(pat)
+    for p in pattern:
+        count.append(pattern_count(text,p))
+    for f in range (len(pattern)):
+        count_pat.append([count[f],pattern[f]])
+    #print (count_pat)
+    for i,c in count_pat:
+        if i== i in max(count_pat):
+            frequent.append(c)
+        freq_list= set(frequent)
+    return (" ".join(pats for pats in freq_list)) 
+
+    
+    
+    
+    
+   
