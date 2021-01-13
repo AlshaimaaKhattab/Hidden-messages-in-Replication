@@ -1,0 +1,6 @@
+def pattern_position(text,pattern):
+    count=[]
+    for i in range (len(text)-len(pattern)+1):
+        if text[i:i+len(pattern)]==pattern:
+            count.append (i)
+    return (" ".join(str(intg) for intg in count))
