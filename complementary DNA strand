@@ -1,0 +1,13 @@
+#  to return a complementary DNA strand
+def complementary_strand(p):
+    p=list(p)
+    for i,n in (enumerate (p)):
+        if n=='A':
+            p[i]= 'T'
+        elif n=='T':
+            p[i]='A'
+        elif n=='C':
+            p[i]='G'
+        elif n=='G':
+            p[i]='C'
+    return("".join([str(elem) for elem in p[::-1]]))
